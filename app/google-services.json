@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "970521308558",
+    "project_id": "android-database-nick",
+    "storage_bucket": "android-database-nick.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970521308558:android:1c0042ea38137ddebd08df",
+        "android_client_info": {
+          "package_name": "com.example.mijnapplicatie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970521308558-v043hn0llle6b4286pcn1bdesrm1v9p8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGOTb__KOOgfQddAORxxo9T4tEBV3zj3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970521308558-v043hn0llle6b4286pcn1bdesrm1v9p8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

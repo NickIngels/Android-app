@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Mijn Applicatie</string>
+    <string name="title_home">Game</string>
+    <string name="title_dashboard">Leaderboard</string>
+    <string name="title_notifications">Info</string>
+    <string name="settings">Info</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="game">Game</string>
+    <string name="reset">Reset</string>
+    <string name="allow_cookies">Allow Cookies</string>
+    <string name="music">Music</string>
+    <string name="Leaderboard">Leaderboard</string>
+    <string name="top_scores">Top scores</string>
+    <string name="latest_score">Latest score</string>
+    <string name="just_for_fun">Just for fun</string>
+</resources>

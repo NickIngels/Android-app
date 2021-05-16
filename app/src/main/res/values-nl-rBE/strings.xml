@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mijn Applicatie</string>
+    <string name="title_home">Spel</string>
+    <string name="title_dashboard">Klassement</string>
+    <string name="title_notifications">Info</string>
+    <string name="settings">Info</string>
+    <string name="leaderboard">Klassement</string>
+    <string name="game">Spel</string>
+    <string name="reset">Herstart</string>
+    <string name="allow_cookies">Sta cookies toe</string>
+    <string name="music">Muziek</string>
+    <string name="Leaderboard">Klassement</string>
+    <string name="top_scores">Beste scores</string>
+    <string name="latest_score">Laatste score</string>
+    <string name="just_for_fun">Voor de leute</string>
+</resources>
