@@ -34,19 +34,11 @@ class NotificationsFragment : Fragment() {
         notificationsViewModel =
                 ViewModelProvider(this).get(NotificationsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_notifications, container, false)
-        //val textView: TextView = root.findViewById(R.id.text_notifications)
-        //notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
-        //    textView.text = it
-        //})
-
-        //https://programmer.group/introduction-to-basic-use-of-layer-list-for-android-layer.html
 
 
-        // Read from the database
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
+
                 val value = dataSnapshot.getValue(Long::class.java)!!.toString()
                 Log.d(TAG, "Value is: $value")
                 val textView: TextView = root.findViewById(R.id.latestScore)
@@ -56,7 +48,6 @@ class NotificationsFragment : Fragment() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
                 Log.w(TAG, "Failed to read value.", error.toException())
             }
         })

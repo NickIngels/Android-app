@@ -28,8 +28,7 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
         val appBarConfiguration = AppBarConfiguration(setOf(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications))
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -45,17 +44,6 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-
-
-        //mediaPlayer.start()
-
-/*
-        musicSwitch?.setOnCheckedChangeListener{ _ , isChecked ->
-            val message = if (isChecked) "Switch1:ON" else "Switch1:OFF"
-            Toast.makeText(this@MainActivity, message,
-                Toast.LENGTH_SHORT).show()
-            Log.i(TAG, "TOGGLESWITCH " + message)
-        }*/
     }
 
 }

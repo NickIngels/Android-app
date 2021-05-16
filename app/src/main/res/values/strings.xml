@@ -13,4 +13,5 @@
     <string name="top_scores">Top scores</string>
     <string name="latest_score">Latest score</string>
     <string name="just_for_fun">Just for fun</string>
+    <string name="created_for">Created for:</string>
 </resources>

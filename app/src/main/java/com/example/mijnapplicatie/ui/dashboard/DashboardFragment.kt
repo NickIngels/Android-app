@@ -36,13 +36,6 @@ class DashboardFragment : Fragment() {
 
 
 
-
-
-            //println(myRef)
-            // Read from the database
-
-
-
         fun getScores(myRef: DatabaseReference) {
             myRef.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -88,10 +81,7 @@ class DashboardFragment : Fragment() {
 
                 }
 
-
-
                 override fun onCancelled(error: DatabaseError) {
-                    // Failed to read value
                     Log.w(TAG, "Failed to read value.", error.toException())
                 }
             })

@@ -22,16 +22,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 
 // Logica memory https://www.youtube.com/watch?v=U4Wtjewy7EY
 const val TAG = "MainActivity"
-//        app:backgroundTint=""
-//        android:background="@drawable/custom_reset_button"
 
-/*<item name="colorPrimary">#FF0000</item>
-<item name="colorPrimaryVariant">#F26767</item>
-<item name="colorOnPrimary">@color/white</item>
-<!-- Secondary brand color. -->
-<item name="colorSecondary">#F26767</item>
-<item name="colorSecondaryVariant">#F26767</item>
-<item name="colorOnSecondary">@color/black</item>*/
  class HomeFragment : Fragment() {
 
     private lateinit var buttons: List<ImageButton>
@@ -57,32 +48,18 @@ const val TAG = "MainActivity"
         val startGameButton = root.findViewById<FloatingActionButton>(R.id.startGame)
 
 
-        //val textView: TextView = root.findViewById(R.id.text_home)
-        //homeViewModel.text.observe(viewLifecycleOwner, Observer {
-        //    textView.text = it
-        //})
-
         buttons = listOf(root.findViewById<ImageButton>(R.id.imageButton1), root.findViewById<ImageButton>(R.id.imageButton2), root.findViewById<ImageButton>(R.id.imageButton3), root.findViewById<ImageButton>(R.id.imageButton4),
             root.findViewById<ImageButton>(R.id.imageButton5), root.findViewById<ImageButton>(R.id.imageButton6), root.findViewById<ImageButton>(R.id.imageButton7), root.findViewById<ImageButton>(R.id.imageButton8))
 
         resetButton.setOnClickListener{forceResetGame()}
 
-        //val stopTime: Long=0
+
         startGameButton.setOnClickListener{
             chronometer.base = SystemClock.elapsedRealtime()
             chronometer.start()
             resetEntireGame()
         }
-
-
-
-
-
-        //resetEntireGame()
         return root
-
-
-
     }
 
 
@@ -149,13 +126,6 @@ const val TAG = "MainActivity"
                 button.alpha = 0.2f
             }
             button.setImageResource(if (card.cardFaceUp) card.identifier else R.drawable.ic_photo_vector)
-            /*for (card in cards) {
-                if (card.cardFaceUp) {
-                    button.setImageResource(card.identifier)
-                } else {
-                    button.setImageResource(R.drawable.ic_photo_vector)
-                }
-            }*/
         }
     }
 
@@ -193,15 +163,13 @@ const val TAG = "MainActivity"
             numberOfPairs ++
             Log.i(TAG, "Number of pairs formed " + numberOfPairs)
             if (numberOfPairs == 4){
-                resetEntireGame()
+
                 chronometer.stop()
                 val timeUntilMemoryFinished = SystemClock.elapsedRealtime() - chronometer.base
-                var string = '"'
                 Toast.makeText(activity, "Score: " + timeUntilMemoryFinished, Toast.LENGTH_LONG).show()
                 //myRef = database.getReference("score")
                 myRef.setValue(timeUntilMemoryFinished)
-                //chronometer.base = SystemClock.elapsedRealtime()
-                //chronometer.start()
+                forceResetGame()
             }
             //Toast.makeText(activity, "Pair formed!", Toast.LENGTH_SHORT).show()
         }
